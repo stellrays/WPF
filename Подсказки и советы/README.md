@@ -1,4 +1,4 @@
-# Файл конфигурации приложения App.config
+## Файл конфигурации приложения App.config
 
 ``` bash
 <?xml version="1.0" encoding="utf-8" ?>
@@ -22,7 +22,9 @@
  </connectionStrings>
 </configuration>
 ```
-# Подключение базы данных для контекста данных EF
+
+## Подключение базы данных для контекста данных EF
+
 ``` bash
 protected override (DbContextOptionsBuilder optionsBuilder)
 { 
@@ -45,3 +47,27 @@ protected override (DbContextOptionsBuilder optionsBuilder)
 	 }
  }
 ```
+## Взаимодействие с базой данных SQL Server через ADO.NET
+
+Хранимая процедура, которая осуществляет добавление нового объекта в базу данных.
+
+``` bash
+CREATE PROCEDURE [dbo].[sp_InsertPhone]
+    @title nvarchar(50),
+    @company nvarchar(50),
+    @price int,
+    @Id int out
+AS
+    INSERT INTO Phones (Title, Company, Price)
+    VALUES (@title, @company, @price)
+   
+    SET @Id=SCOPE_IDENTITY()
+GO
+```
+Атрибут connectionString собственно хранит строку подключения. Он состоит из трех частей:
+
+* Data Source=localhost: указывает на название сервера. По умолчанию для MS SQL Server Express используется "localhost"
+* Initial Catalog=mobiledb: название базы данных.
+* Integrated Security=True: задает режим аутентификации
+
+Вывод данных в DataGrid. AutoGenerateColumns="False" позволяет делать привязку к нужным столбцам.
