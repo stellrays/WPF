@@ -44,8 +44,8 @@ protected override (DbContextOptionsBuilder optionsBuilder)
 			//optionsBuilder.UseSqlite(ConfigurationManager.ConnectionStrings["ConnectionSQLite"].ToString());
 			//optionsBuilder.UseSqlite(@"DataSource=ColledgeStore.db;");
 
-	 }
- }
+	}
+}
 ```
 ## Взаимодействие с базой данных SQL Server через ADO.NET
 
