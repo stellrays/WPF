@@ -1,0 +1,1 @@
+Подготовка в WorldSkills
