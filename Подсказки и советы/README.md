@@ -3,8 +3,11 @@
 ``` bash
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
+
  <connectionStrings>
+ 
  <add 
+ 
 	name="DefaultConnection"
 	connectionString="Server=localhost,63027;Database=UserDatabase;Trusted_Connection=True"
 	providerName="System.Data.SqlClient"/>
@@ -20,6 +23,7 @@
 	providerName="System.Data.SQLite" />
 
  </connectionStrings>
+ 
 </configuration>
 ```
 
