@@ -1,13 +1,13 @@
 # Задание
 Создать решение в котором будут следующие проекты ( Visual Studio 2022, .NET Core 6 )
 
-ConsoleApp + EF(Entity Framework Core)
-ConsoleApp + ADO.net
-WPF + EF(Entity Framework Core)
-WPF + ADO.Net
-Windows Forms + EF(Entity Framework Core)
-Windows Forms + ADO.Net
-Windows Forms + ADO.Net (Visual Style)
+1. ConsoleApp + EF(Entity Framework Core)
+2. ConsoleApp + ADO.net
+3. WPF + EF(Entity Framework Core)
+4. WPF + ADO.Net
+5. Windows Forms + EF(Entity Framework Core)
+6. Windows Forms + ADO.Net
+7. Windows Forms + ADO.Net (Visual Style)
 
 Каждый проект выводит в DataGrid данные таблицы Users, в которой есть три поля: Id, Name, Age. Консольные приложения выводят данные в консоль.
 То есть все 7 проектов делают одно и то же, только на разных технологиях создания интерфейса и работы с базой данных.
