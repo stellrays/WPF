@@ -43,6 +43,31 @@ CREATE TABLE [dbo].[Users](
 ## Этап 3
 
    1) Создание WPF приложения (Microsoft + Entity Framework Core)
+   2) Подключим необходимый пакет EntityFramework
+   3) В новой папке Models создать классы User и UserContext
+   
+   Код класса User
+   ``` bash
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Text;
+	using System.Threading.Tasks;
+
+	namespace WPFEntityFrameworkCore.Models
+	{
+	    internal class Users
+	    {
+		public int Id { get; set; }
+		public string Name { get; set; } = null!;
+		public int Age { get; set; }
+	    }
+	}
+
+   ```
+   Код класса UserContext
+   ``` bash
+   ```
 
 ## Этап 4
 
