@@ -30,29 +30,23 @@ CREATE TABLE [dbo].[Users](
     ) ON [PRIMARY]
 ```
 ## Задание 1
-Полезная ссылка https://habr.com/ru/post/694086/
 
-1) Создание Консольного приложения (Microsoft) 
+1) Создание Консольного приложения (Microsoft + Entity Framework Core)
 
-![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/CreateFile.png?raw=true)
+   ![alt text]()
+   
+## Задание 2
 
-2) Установка EF Core в свой проект
+1) Создание Консольного приложения (Microsoft + ADO.net)
 
-  Установить все нужные библиотеки можно через консоль:
-  ``` bash
-  dotnet add ChapterZero package Microsoft.EntityFrameworkCore.Design
-  dotnet add ChapterZero package Microsoft.EntityFrameworkCore.SqlServer
-  dotnet add ChapterZero package Microsoft.EntityFrameworkCore
-  ```
-  
-  Или в Visual Studio через NuGet Package Manager. Процесс показан ниже:
-  
-  a) Переходим в Tools / NuGet Package Manager / Manage NuGet Packages for Solution.
+## Задание 3
 
-  ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/tools.png?raw=true)
-  
-  b) Переходим в Browse(Обзор) и ищем Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer и Microsoft.EntityFrameworkCore.Design
-  
-   Устанавливаем их
-     
-   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/EFTools.png?raw=true)
+1) Создание Консольного приложения (Microsoft + ADO.net)
+
+## Задание 4
+
+## Задание 5
+
+## Задание 6
+
+## Задание 7
