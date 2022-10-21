@@ -39,11 +39,11 @@ CREATE TABLE [dbo].[Users](
    
 ## Этап 2
 
-1) Создание Консольного приложения (Microsoft + ADO.net)
+⋅⋅⋅1) Создание Консольного приложения (Microsoft + ADO.net)
 
 ## Этап 3
 
-1) Создание WPF приложения (Microsoft + Entity Framework Core)
+⋅⋅⋅1) Создание WPF приложения (Microsoft + Entity Framework Core)
 
 ## Этап 4
 
