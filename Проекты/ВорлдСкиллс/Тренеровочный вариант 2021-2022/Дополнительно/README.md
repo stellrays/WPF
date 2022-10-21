@@ -29,9 +29,8 @@ CREATE TABLE [dbo].[Users](
         ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
     ) ON [PRIMARY]
 ```
-## Этап 1
-
 <code>
+## Этап 1
 	
 1) Создание Консольного приложения (Microsoft + Entity Framework Core)
 
