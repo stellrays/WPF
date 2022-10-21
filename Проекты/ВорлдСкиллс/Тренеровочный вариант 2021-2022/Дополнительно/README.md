@@ -92,6 +92,41 @@ CREATE TABLE [dbo].[Users](
 
    1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
    2) Добавить  пакет EntityFramework
+   3) В новой папке Models создать классы User и UserContext
+	
+	 Код класса User:
+	   ``` bash
+		using System;
+		using System.Collections.Generic;
+		using System.Linq;
+		using System.Text;
+		using System.Threading.Tasks;
+
+		namespace WinFormsAppEntityFrameworkCore.Models
+		{
+		    internal class User
+		    {
+			public int Id { get; set; }
+			public string Name { get; set; } = null!;
+			public int Age { get; set; }
+		    }
+		}
+	   ```
+	 Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
+	
+	   Код класса UserContext:
+	   ``` bash
+		using System.Data.Entity;
+
+		namespace WinFormsAppEntityFrameworkCore.Models
+		{
+		    internal class UserContext : DbContext
+		    {
+			public UserContext() : base("DefaultConnection") { }
+			public DbSet<User> Users { get; set; }
+		    }
+		}
+	   ```
 ## Этап 6
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
