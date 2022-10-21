@@ -26,7 +26,7 @@
 
 2) Установка EF Core в свой проект
 
-  Установить все нужные библиотеки можно консоль:
+  Установить все нужные библиотеки можно через консоль:
   ``` bash
   dotnet add ChapterZero package Microsoft.EntityFrameworkCore.Design
   dotnet add ChapterZero package Microsoft.EntityFrameworkCore.SqlServer
