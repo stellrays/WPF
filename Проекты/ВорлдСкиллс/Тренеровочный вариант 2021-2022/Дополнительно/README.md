@@ -30,6 +30,7 @@ CREATE TABLE [dbo].[Users](
     ) ON [PRIMARY]
 ```
 <code>
+
 ## Этап 1
 	
 1) Создание Консольного приложения (Microsoft + Entity Framework Core)
