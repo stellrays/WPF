@@ -127,6 +127,9 @@ CREATE TABLE [dbo].[Users](
 		    }
 		}
 	   ```
+	
+	Свойства грида: AllowsUserToAddRows = False
+			SelectionMode = FullColumnSelect
 ## Этап 6
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
