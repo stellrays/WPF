@@ -19,5 +19,7 @@
 
 ## Задание 1
 Полезная ссылка https://habr.com/ru/post/694086/
+
 Создание Консольного приложения (Microsoft) 
+
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/CreateFile.png?raw=true)
