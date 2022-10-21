@@ -42,4 +42,4 @@
   2. Переходим в Browse(Обзор) и ищем Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer и Microsoft.EntityFrameworkCore.Design
      Устанавливаем их
      
-     ![alt text]()
+     ![alt text](![image](https://user-images.githubusercontent.com/91783144/197137940-17fcfcc1-88ef-438d-949d-384a56b2dde1.png))
