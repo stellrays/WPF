@@ -43,7 +43,7 @@ CREATE TABLE [dbo].[Users](
 ## Этап 3
 
    1) Создание WPF приложения (Microsoft + Entity Framework Core)
-   2) Подключим необходимый пакет EntityFramework
+   2) Подключим необходимый пакет EntityFramework, Microsoft.EntityFrameworkCore.SqlServer
    3) В новой папке Models создать классы User и UserContext
    
    Код класса User
@@ -56,7 +56,7 @@ CREATE TABLE [dbo].[Users](
 
 	namespace WPFEntityFrameworkCore.Models
 	{
-	    internal class Users
+	    public class User
 	    {
 		public int Id { get; set; }
 		public string Name { get; set; } = null!;
@@ -65,10 +65,25 @@ CREATE TABLE [dbo].[Users](
 	}
 
    ```
+   Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
    Код класса UserContext
    ``` bash
+   
+   ```
+   Замечание: User - это класс модели, Users - это название таблицы в базе данных Класс контекста наследуется от класса DbContext. В своем конструкторе он          передает в конструктор базового класса название строки подключения из файла App.config. Также в контексте данных определяется свойство по типу DbSet<Product> -        через него мы будем взаимодействовать с таблицей, которая хранит объекты Product.
+
+   В разметки Xaml
+   ``` bash
+	<DataGrid AutoGenerateColumns="False" x:Name="usersGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Имя" Width="120"/>
+                <DataGridTextColumn Binding="{Binding Age}" Header="Возраст" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
    ```
 
+Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 ## Этап 4
 
    1) Создание WPF приложения (Microsoft + ADO.net)
@@ -76,7 +91,7 @@ CREATE TABLE [dbo].[Users](
 ## Этап 5
 
    1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
-
+   2) Добавить  пакет EntityFramework
 ## Этап 6
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
