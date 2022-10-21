@@ -29,24 +29,32 @@ CREATE TABLE [dbo].[Users](
         ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
     ) ON [PRIMARY]
 ```
-## Задание 1
+## Этап 1
 
-1) Создание Консольного приложения (Microsoft + Entity Framework Core)
+⋅⋅⋅1) Создание Консольного приложения (Microsoft + Entity Framework Core)
 
    ![alt text]()
    
-## Задание 2
+## Этап 2
 
-1) Создание Консольного приложения (Microsoft + ADO.net)
+⋅⋅⋅1) Создание Консольного приложения (Microsoft + ADO.net)
 
-## Задание 3
+## Этап 3
 
-1) Создание Консольного приложения (Microsoft + ADO.net)
+⋅⋅⋅1) Создание WPF приложения (Microsoft + Entity Framework Core)
 
-## Задание 4
+## Этап 4
 
-## Задание 5
+⋅⋅⋅1) Создание WPF приложения (Microsoft + ADO.net)
 
-## Задание 6
+## Этап 5
 
-## Задание 7
+⋅⋅⋅1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
+
+## Этап 6
+
+⋅⋅⋅1) Создание Windows Forms приложения (Microsoft + ADO.net)
+
+## Этап 7
+
+⋅⋅⋅1) Создание Windows Forms приложения (.Net Framework + ADO.net)
