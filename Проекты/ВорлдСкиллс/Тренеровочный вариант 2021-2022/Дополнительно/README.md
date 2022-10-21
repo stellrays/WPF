@@ -16,21 +16,19 @@
 Решение загружаете на github. В репозитории должен быть обязательно README.md с описанием по каждому проекту.
 Также должен присутствовать файл .gitignore
 
-###Скрип SQL создания таблицы Users
+# Скрип SQL создания таблицы Users
 
-    ``` bash
-  CREATE TABLE [dbo].[Users](
-    [Id] [int] NOT NULL,
-    [Name] [varchar](100) NULL,
-    [Age] [int] NULL,
-   CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
-  (
-    [Id] ASC
-  )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
-  ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-  ) ON [PRIMARY]
-   ```
-
+``` bash
+CREATE TABLE [dbo].[Users](
+	[Id] [int] NOT NULL,
+	[Name] [varchar](100) NULL,
+	[Age] [int] NULL,
+ CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+    ( [Id] ASC ) WITH 
+        (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+        ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+    ) ON [PRIMARY]
+```
 ## Задание 1
 Полезная ссылка https://habr.com/ru/post/694086/
 
