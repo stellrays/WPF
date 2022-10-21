@@ -30,31 +30,32 @@ CREATE TABLE [dbo].[Users](
     ) ON [PRIMARY]
 ```
 ## Этап 1
-
-⋅⋅⋅1) Создание Консольного приложения (Microsoft + Entity Framework Core)
+<code>
+1) Создание Консольного приложения (Microsoft + Entity Framework Core)
 
    ![alt text]()
    
 ## Этап 2
 
-⋅⋅⋅1) Создание Консольного приложения (Microsoft + ADO.net)
+1) Создание Консольного приложения (Microsoft + ADO.net)
 
 ## Этап 3
 
-⋅⋅⋅1) Создание WPF приложения (Microsoft + Entity Framework Core)
+1) Создание WPF приложения (Microsoft + Entity Framework Core)
 
 ## Этап 4
 
-⋅⋅⋅1) Создание WPF приложения (Microsoft + ADO.net)
+1) Создание WPF приложения (Microsoft + ADO.net)
 
 ## Этап 5
 
-⋅⋅⋅1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
+1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
 
 ## Этап 6
 
-⋅⋅⋅1) Создание Windows Forms приложения (Microsoft + ADO.net)
+1) Создание Windows Forms приложения (Microsoft + ADO.net)
 
 ## Этап 7
 
-⋅⋅⋅1) Создание Windows Forms приложения (.Net Framework + ADO.net)
+1) Создание Windows Forms приложения (.Net Framework + ADO.net)
+</code>
