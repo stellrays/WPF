@@ -37,4 +37,9 @@
   
   1. Переходим в Tools / NuGet Package Manager / Manage NuGet Packages for Solution.
 
-  ![alt text](https:)
+  ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/tools.png?raw=true)
+  
+  2. Переходим в Browse(Обзор) и ищем Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer и Microsoft.EntityFrameworkCore.Design
+     Устанавливаем их
+     
+     ![alt text]()
