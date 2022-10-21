@@ -20,6 +20,15 @@
 ## Задание 1
 Полезная ссылка https://habr.com/ru/post/694086/
 
-Создание Консольного приложения (Microsoft) 
+1) Создание Консольного приложения (Microsoft) 
 
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/CreateFile.png?raw=true)
+
+2) Установка EF Core в свой проект
+
+  Установить все нужные библиотеки можно как консоль:
+  ``` bash
+  dotnet add ChapterZero package Microsoft.EntityFrameworkCore.Design
+  dotnet add ChapterZero package Microsoft.EntityFrameworkCore.SqlServer
+  dotnet add ChapterZero package Microsoft.EntityFrameworkCore
+  ```
