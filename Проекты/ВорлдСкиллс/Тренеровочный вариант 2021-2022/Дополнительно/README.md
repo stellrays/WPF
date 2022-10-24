@@ -271,12 +271,12 @@ CREATE TABLE [dbo].[Users](
 		      providerName="System.Data.SqlClient"/>
 	</connectionStrings>
 	</configuration>
+	
 	```
 	
     4) Код Form1.cs:
 	
    ``` bash
-	
 	using Microsoft.Data.SqlClient;
 	using System.Configuration;
 	using System.Data;
@@ -309,8 +309,7 @@ CREATE TABLE [dbo].[Users](
 		    //Подключение закрыто
 		   }
 	     }
-	  }
-	
+	  }	
    ```
 	
    5) Результат проекта:
