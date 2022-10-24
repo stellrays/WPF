@@ -130,9 +130,11 @@ CREATE TABLE [dbo].[Users](
 	
 	Свойства грида: AllowsUserToAddRows = False
 			SelectionMode = FullColumnSelect
-## Этап 6 (в процессе)
+## Этап 6 (в процессе я тут)
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
+   2) Для работы с базой данных MS SQL Server в .NET 5 и выше (а также .NET Core 3.0/3.1) необходимо установить в проект через nuget пакет Microsoft.Data.SqlClient
+	
 
 ## Этап 7
 
