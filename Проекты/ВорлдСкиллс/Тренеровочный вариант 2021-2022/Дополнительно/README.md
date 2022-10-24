@@ -89,7 +89,7 @@ CREATE TABLE [dbo].[Users](
    }
 
    ```
-   4)Код для Program.cs:
+   4) Код для Program.cs:
    
    ``` bash
    using System.Reflection.PortableExecutable;
@@ -272,6 +272,7 @@ CREATE TABLE [dbo].[Users](
 	</connectionStrings>
 	</configuration>
 	```
+	
     4) Код Form1.cs:
 	
 	``` bash
@@ -311,6 +312,7 @@ CREATE TABLE [dbo].[Users](
 	  }
 	
 	```
+	
    5) Результат проекта:
 	
 	![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/WinFormsAppADONetResult.png?raw=true)
