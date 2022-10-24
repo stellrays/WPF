@@ -39,6 +39,8 @@ CREATE TABLE [dbo].[Users](
 ## Этап 2 (в процессе  я тут)
 
    1) Создание Консольного приложения (Microsoft + ADO.net)
+   2) Для работы с базой данных MS SQL Server в .NET 5 и выше (а также .NET Core 3.0/3.1) добавить пакет Microsoft.Data.SqlClient
+   3) 
 
 ## Этап 3 (в процессе)
 
@@ -133,7 +135,7 @@ CREATE TABLE [dbo].[Users](
 ## Этап 6 (в процессе)
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
-   2) Для работы с базой данных MS SQL Server в .NET 5 и выше (а также .NET Core 3.0/3.1) добавить пакет Microsoft.Data.SqlClient
+   2) Microsoft.Data.SqlClient
    3) 
 	
 
