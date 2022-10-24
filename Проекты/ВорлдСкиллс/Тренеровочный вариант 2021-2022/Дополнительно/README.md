@@ -137,11 +137,11 @@ CREATE TABLE [dbo].[Users](
 ## Этап 7 (в процессе)
 
    1) Создание Windows Forms приложения (.Net Framework + ADO.net)
-   2) Добавив DataGridView на форму, добавим источник данных: 
+   2) Добавив DataGridView на форму, добавить источник данных: 
 	
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
 	
-   3) Выбрав источник данных и тип модели базы данных, добавим подключение:
+   3) Выбрав источник данных и тип модели базы данных, добавить подключение:
 	
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource1.png?raw=true)
 
@@ -149,6 +149,6 @@ CREATE TABLE [dbo].[Users](
    
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource2.png?raw=true)
 
-   5) После запуска приложения получим следующий результат:
+   5) После запуска приложения получить следующий результат:
    
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSourceRezult.png?raw=true)
