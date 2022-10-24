@@ -107,7 +107,7 @@ CREATE TABLE [dbo].[Users](
     }
    }
    ```
-   5)Результат проекта:
+   5) Результат проекта:
    
    ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppEntityFrameworkCoreRezult.png?raw=true)
    
@@ -254,7 +254,7 @@ CREATE TABLE [dbo].[Users](
 	
 	Свойства грида: AllowsUserToAddRows = False
 			SelectionMode = FullColumnSelect
-## Этап 6 (в процессе я тут)
+## Этап 6
 
    1) Создать Windows Forms приложения (Microsoft + ADO.net)
    2) Добавить пакет Microsoft.Data.SqlClient и DataGridView
