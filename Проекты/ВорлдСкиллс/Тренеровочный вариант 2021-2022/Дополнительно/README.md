@@ -134,7 +134,7 @@ CREATE TABLE [dbo].[Users](
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
 
-## Этап 7 (в процессе)
+## Этап 7
 
    1) Создание Windows Forms приложения (.Net Framework + ADO.net)
    2) Добавив DataGridView на форму, добавить источник данных: 
