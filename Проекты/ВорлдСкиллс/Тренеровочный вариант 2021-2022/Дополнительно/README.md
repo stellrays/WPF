@@ -30,15 +30,90 @@ CREATE TABLE [dbo].[Users](
     ) ON [PRIMARY]
 ```
 
-## Этап 1 (в процессе я тут)
+## Этап 1
 	
-   1) Создание Консольного приложения (Microsoft + Entity Framework Core)
+   1) Создать Консольного приложения (Microsoft + Entity Framework Core)
+   2) Подключить необходимые пакеты Microsoft.EntityFrameworkCore.SqlServer и Microsoft.EntityFrameworkCore.Tools
+   3) В новой папке Models создать классы User и UserContext
+   
+   Код класса User:
+   
+   ``` bash
+   using System;
+   using System.Collections.Generic;
+   namespace ConsoleAppEntityFrameworkCore.Model
+   {
+    public class User
+	    {
+		public int Id { get; set; }
+		public string Name { get; set; } = null;
+		public int Age { get; set; }
+	    }
+   }
 
-   ![alt text]()
+   ```
+   Код контекстного класса UserContext:
+   
+   
+   ``` bash
+   using System;
+   using System.Collections.Generic;
+   using Microsoft.EntityFrameworkCore;
+   using Microsoft.EntityFrameworkCore.Metadata;
+   using Microsoft.IdentityModel.Protocols;
+   namespace ConsoleAppEntityFrameworkCore.Model
+   {
+    public partial class UserContext : DbContext
+    {
+        public UserContext()
+        {
+        }
+        public UserContext(DbContextOptions<UserContext> options)
+            : base(options)
+        {
+        }
+        public DbSet<User> Users => Set<User>();
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Server = DESKTOP-0VRO2QB\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True;");
+            }
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            OnModelCreatingPartial(modelBuilder);
+        }
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    }
+   }
+
+   ```
+   4)Код для Program.cs:
+   
+   ``` bash
+   using System.Reflection.PortableExecutable;
+   using ConsoleAppEntityFrameworkCore.Model;
+   using static ConsoleAppEntityFrameworkCore.Model.User;
+   using (UserContext db = new UserContext())
+   {
+    // получаем объекты из бд и выводим на консоль
+    var users = db.Users.ToList();
+    Console.WriteLine("Вывод данных:");
+    foreach (User u in users)
+    {        
+        Console.WriteLine($"ID\t Name\t Age\n" +
+            $"{u.Id}\t {u.Name}\t {u.Age}");
+    }
+   }
+   ```
+   5)Результат проекта:
+   
+   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppEntityFrameworkCoreRezult.png?raw=true)
    
 ## Этап 2
 
-   1) Создание Консольного приложения (Microsoft + ADO.net)
+   1) Созданть Консольного приложения (Microsoft + ADO.net)
    2) Для работы с базой данных MS SQL Server в .NET 5 и выше (а также .NET Core 3.0/3.1) добавить пакет Microsoft.Data.SqlClient
    3) Итоговый файл Program.cs выглядит следующим образом:
    ``` bash
@@ -78,7 +153,7 @@ CREATE TABLE [dbo].[Users](
 	}
 	Console.Read();
    ```
-   4) Результат кода:
+   4) Результат проекта:
    
    ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppADOnetRezult.png?raw=true)
    
@@ -91,8 +166,8 @@ CREATE TABLE [dbo].[Users](
 
 ## Этап 3 (в процессе)
 
-   1) Создание WPF приложения (Microsoft + Entity Framework Core)
-   2) Подключим необходимый пакет EntityFramework, Microsoft.EntityFrameworkCore.SqlServer
+   1) Создать WPF приложения (Microsoft + Entity Framework Core)
+   2) Подключить необходимый пакет EntityFramework, Microsoft.EntityFrameworkCore.SqlServer
    3) В новой папке Models создать классы User и UserContext
    
    Код класса User
@@ -135,11 +210,11 @@ CREATE TABLE [dbo].[Users](
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 ## Этап 4 (в процессе)
 
-   1) Создание WPF приложения (Microsoft + ADO.net)
+   1) Создать WPF приложения (Microsoft + ADO.net)
 
 ## Этап 5 (в процессе)
 
-   1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
+   1) Создать Windows Forms приложения (Microsoft + Entity Framework Core)
    2) Добавить  пакет EntityFramework
    3) В новой папке Models создать классы User и UserContext
 	
@@ -181,14 +256,14 @@ CREATE TABLE [dbo].[Users](
 			SelectionMode = FullColumnSelect
 ## Этап 6 (в процессе)
 
-   1) Создание Windows Forms приложения (Microsoft + ADO.net)
+   1) Создать Windows Forms приложения (Microsoft + ADO.net)
    2) Microsoft.Data.SqlClient
    3) 
 	
 
 ## Этап 7
 
-   1) Создание Windows Forms приложения (.Net Framework + ADO.net)
+   1) Создать Windows Forms приложения (.Net Framework + ADO.net)
    2) Добавив DataGridView на форму, добавить источник данных: 
 	
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
@@ -201,6 +276,6 @@ CREATE TABLE [dbo].[Users](
    
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource2.png?raw=true)
 
-   5) После запуска приложения получить следующий результат:
+   5) Результат проекта:
    
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSourceRezult.png?raw=true)
