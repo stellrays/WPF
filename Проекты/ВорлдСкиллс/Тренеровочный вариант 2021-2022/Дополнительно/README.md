@@ -137,9 +137,11 @@ CREATE TABLE [dbo].[Users](
 ## Этап 7 (в процессе)
 
    1) Создание Windows Forms приложения (.Net Framework + ADO.net)
-   2) Добавив DataGridView на форму, выберим источник данных: 
+   2) Добавив DataGridView на форму, добавим источник данных: 
 	
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
 	
-   3) 
+   3) Выбррав источник данных и тип модели базы данных, добавим подключение:
+	
+![alt text]()
 
