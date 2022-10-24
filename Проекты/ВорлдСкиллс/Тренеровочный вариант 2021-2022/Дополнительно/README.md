@@ -79,7 +79,7 @@ CREATE TABLE [dbo].[Users](
 	Console.Read();
    ```
    4) Результат кода:
-![alt text]()
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppADOnetRezult.png?raw=true)
    
 
 ## Этап 3 (в процессе)
