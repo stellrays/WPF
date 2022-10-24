@@ -36,7 +36,7 @@ CREATE TABLE [dbo].[Users](
 
    ![alt text]()
    
-## Этап 2 (в процессе  я тут)
+## Этап 2
 
    1) Создание Консольного приложения (Microsoft + ADO.net)
    2) Для работы с базой данных MS SQL Server в .NET 5 и выше (а также .NET Core 3.0/3.1) добавить пакет Microsoft.Data.SqlClient
