@@ -140,6 +140,5 @@ CREATE TABLE [dbo].[Users](
    2) Добавив DataGridView на форму, выберим источник данных:
 	
 	![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
-	
   3) 
 
