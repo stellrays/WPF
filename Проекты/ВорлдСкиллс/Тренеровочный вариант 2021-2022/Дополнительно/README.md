@@ -141,7 +141,14 @@ CREATE TABLE [dbo].[Users](
 	
 ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
 	
-   3) Выбррав источник данных и тип модели базы данных, добавим подключение:
+   3) Выбрав источник данных и тип модели базы данных, добавим подключение:
 	
-![alt text]()
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource1.png?raw=true)
 
+   4) Выбрать объекты базы данных, которые хотим вывести:
+   
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource2.png?raw=true)
+
+   5) После запуска приложения получим следующий результат:
+   
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSourceRezult.png?raw=true)
