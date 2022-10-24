@@ -274,9 +274,11 @@ CREATE TABLE [dbo].[Users](
 	
 	```
 	
+
+	
     4) Код Form1.cs:
-      ``` bash
-	using Microsoft.Data.SqlClient;
+``` bash
+using Microsoft.Data.SqlClient;
 	using System.Configuration;
 	using System.Data;
 	using System.Data.Common;
@@ -309,7 +311,7 @@ CREATE TABLE [dbo].[Users](
 		   }
 	     }
 	  }	
-        ```
+```
 	
    5) Результат проекта:
 	
