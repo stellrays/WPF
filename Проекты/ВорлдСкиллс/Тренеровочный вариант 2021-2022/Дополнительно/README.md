@@ -82,9 +82,11 @@ CREATE TABLE [dbo].[Users](
    
    ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppADOnetRezult.png?raw=true)
    
-    ``` bash
+   ``` bash
+
     Примечание: в строку подключения нужно было дописать команду TrustServerCertificate=True;
-    ```
+    
+   ```
    
 
 ## Этап 3 (в процессе)
