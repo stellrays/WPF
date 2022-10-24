@@ -30,17 +30,17 @@ CREATE TABLE [dbo].[Users](
     ) ON [PRIMARY]
 ```
 
-## Этап 1
+## Этап 1 (в процессе)
 	
    1) Создание Консольного приложения (Microsoft + Entity Framework Core)
 
    ![alt text]()
    
-## Этап 2
+## Этап 2 (в процессе)
 
    1) Создание Консольного приложения (Microsoft + ADO.net)
 
-## Этап 3
+## Этап 3 (в процессе)
 
    1) Создание WPF приложения (Microsoft + Entity Framework Core)
    2) Подключим необходимый пакет EntityFramework, Microsoft.EntityFrameworkCore.SqlServer
@@ -84,11 +84,11 @@ CREATE TABLE [dbo].[Users](
    ```
 
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
-## Этап 4
+## Этап 4 (в процессе)
 
    1) Создание WPF приложения (Microsoft + ADO.net)
 
-## Этап 5
+## Этап 5 (в процессе)
 
    1) Создание Windows Forms приложения (Microsoft + Entity Framework Core)
    2) Добавить  пакет EntityFramework
@@ -130,13 +130,13 @@ CREATE TABLE [dbo].[Users](
 	
 	Свойства грида: AllowsUserToAddRows = False
 			SelectionMode = FullColumnSelect
-## Этап 6
+## Этап 6 (в процессе)
 
    1) Создание Windows Forms приложения (Microsoft + ADO.net)
 
-## Этап 7
+## Этап 7 (в процессе)
 
    1) Создание Windows Forms приложения (.Net Framework + ADO.net)
    2) Добавив DataGridView на форму, выберим источник данных:
-	![alt text]()
+	![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
 
