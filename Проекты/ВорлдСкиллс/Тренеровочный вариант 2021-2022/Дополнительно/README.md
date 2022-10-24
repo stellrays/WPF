@@ -254,13 +254,67 @@ CREATE TABLE [dbo].[Users](
 	
 	Свойства грида: AllowsUserToAddRows = False
 			SelectionMode = FullColumnSelect
-## Этап 6 (в процессе)
+## Этап 6 (в процессе я тут)
 
    1) Создать Windows Forms приложения (Microsoft + ADO.net)
-   2) Microsoft.Data.SqlClient
-   3) 
+   2) Добавить пакет Microsoft.Data.SqlClient и DataGridView
+   3) Сделать строку подключения через App.config
 	
-
+   Код App.config:
+	
+	``` bash
+	<?xml version="1.0" encoding="utf-8" ?>
+	<configuration>
+	<connectionStrings>
+		<add  name="ConnectionLocalDb"
+		      connectionString="Server = DESKTOP-0VRO2QB\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
+		      providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+	</configuration>
+	```
+    4) Код Form1.cs:
+	
+	``` bash
+	
+	using Microsoft.Data.SqlClient;
+	using System.Configuration;
+	using System.Data;
+	using System.Data.Common;
+	using System.Drawing.Text;
+	namespace WinFormsAppADONet
+	{
+    	   public partial class Form1 : Form
+    	   {     
+		   public Form1()
+		   {
+		    InitializeComponent();
+		    LoadData();
+		   }
+		   private SqlDataAdapter adapter = null;
+		   private DataTable dataTable = null;
+		   private void LoadData()
+		   {            
+		       string connectionString = ConfigurationManager.ConnectionStrings["ConnectionLocalDb"].ConnectionString;
+		       // Создание подключения
+		       using (SqlConnection connection = new SqlConnection(connectionString))
+		       {
+			   connection.Open();
+			   //Подключение открыто
+			   adapter = new SqlDataAdapter("SELECT * FROM Users", connectionString) ;
+			   dataTable = new DataTable();
+			   adapter.Fill(dataTable);
+			   dataGridView1.DataSource = dataTable;
+		       }
+		    //Подключение закрыто
+		   }
+	     }
+	  }
+	
+	```
+   5) Результат проекта:
+	
+	![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/WinFormsAppADONetResult.png?raw=true)
+	
 ## Этап 7
 
    1) Создать Windows Forms приложения (.Net Framework + ADO.net)
