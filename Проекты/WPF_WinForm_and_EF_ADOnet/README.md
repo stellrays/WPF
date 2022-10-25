@@ -171,6 +171,7 @@ CREATE TABLE [dbo].[Users](
    3) В новой папке Models создать классы User и UserContext
    
    Код класса User
+   
    ``` Csharp
 	using System;
 	using System.Collections.Generic;
@@ -191,10 +192,11 @@ CREATE TABLE [dbo].[Users](
    ```
    Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
    Код класса UserContext
-   ``` bash
    
+   ``` bash
+    Замечание: User - это класс модели, Users - это название таблицы в базе данных Класс контекста наследуется от класса DbContext. В своем конструкторе он          передает в конструктор базового класса название строки подключения из файла App.config. Также в контексте данных определяется свойство по типу DbSet<User> -        через него мы будем взаимодействовать с таблицей, которая хранит объекты User.
    ```
-   Замечание: User - это класс модели, Users - это название таблицы в базе данных Класс контекста наследуется от класса DbContext. В своем конструкторе он          передает в конструктор базового класса название строки подключения из файла App.config. Также в контексте данных определяется свойство по типу DbSet<Product> -        через него мы будем взаимодействовать с таблицей, которая хранит объекты Product.
+  
 
    В разметки Xaml
    ``` xml
@@ -219,6 +221,7 @@ CREATE TABLE [dbo].[Users](
    3) В новой папке Models создать классы User и UserContext
 	
 	 Код класса User:
+	 
 	   ``` Csharp
 		using System;
 		using System.Collections.Generic;
@@ -239,6 +242,7 @@ CREATE TABLE [dbo].[Users](
 	 Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
 	
 	   Код класса UserContext:
+	   
 	   ``` Csharp
 		using System.Data.Entity;
 
@@ -277,6 +281,7 @@ CREATE TABLE [dbo].[Users](
 
 	
    4) Код Form1.cs:
+   
 		``` Csharp
 			using Microsoft.Data.SqlClient;
 			using System.Configuration;
