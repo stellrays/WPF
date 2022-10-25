@@ -18,7 +18,7 @@
 
 ### Скрип SQL создания таблицы Users
 
-``` bash
+``` sql
 CREATE TABLE [dbo].[Users](
 	[Id] [int] NOT NULL,
 	[Name] [varchar](100) NULL,
