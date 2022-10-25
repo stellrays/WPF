@@ -239,6 +239,7 @@ CREATE TABLE [dbo].[Users](
 		    }
 		}
 	   ```
+	   
 	 Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
 	
 	   Код класса UserContext:
@@ -275,7 +276,6 @@ CREATE TABLE [dbo].[Users](
 			      providerName="System.Data.SqlClient"/>
 		</connectionStrings>
 		</configuration>
-
 		```
 	
 
