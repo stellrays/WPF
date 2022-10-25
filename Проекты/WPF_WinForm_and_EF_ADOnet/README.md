@@ -227,7 +227,7 @@ CREATE TABLE [dbo].[Users](
 	
    Код класса User:
 	 
-	   ``` Csharp
+    ``` Csharp
 		using System;
 		using System.Collections.Generic;
 		using System.Linq;
@@ -243,7 +243,7 @@ CREATE TABLE [dbo].[Users](
 			public int Age { get; set; }
 		    }
 		}
-	   ```
+    ```
 	   
    Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
 	
