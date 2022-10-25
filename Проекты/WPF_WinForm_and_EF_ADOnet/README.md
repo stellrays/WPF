@@ -38,7 +38,7 @@ CREATE TABLE [dbo].[Users](
    
    Код класса User:
    
-   ``` bash
+   ``` Csharp
    using System;
    using System.Collections.Generic;
    namespace ConsoleAppEntityFrameworkCore.Model
@@ -55,7 +55,7 @@ CREATE TABLE [dbo].[Users](
    Код контекстного класса UserContext:
    
    
-   ``` bash
+   ``` Csharp
    using System;
    using System.Collections.Generic;
    using Microsoft.EntityFrameworkCore;
@@ -91,7 +91,7 @@ CREATE TABLE [dbo].[Users](
    ```
    4) Код для Program.cs:
    
-   ``` bash
+   ``` Csharp
    using System.Reflection.PortableExecutable;
    using ConsoleAppEntityFrameworkCore.Model;
    using static ConsoleAppEntityFrameworkCore.Model.User;
@@ -116,7 +116,7 @@ CREATE TABLE [dbo].[Users](
    1) Созданть Консольного приложения (Microsoft + ADO.net)
    2) Для работы с базой данных MS SQL Server в .NET 5 и выше (а также .NET Core 3.0/3.1) добавить пакет Microsoft.Data.SqlClient
    3) Итоговый файл Program.cs выглядит следующим образом:
-   ``` bash
+   ``` Csharp
 	using Microsoft.Data.SqlClient;
 	using System.Data;
 	string connectionString = "Server=DESKTOP-0VRO2QB\\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True; TrustServerCertificate=True;";
@@ -171,7 +171,7 @@ CREATE TABLE [dbo].[Users](
    3) В новой папке Models создать классы User и UserContext
    
    Код класса User
-   ``` bash
+   ``` Csharp
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
@@ -197,7 +197,7 @@ CREATE TABLE [dbo].[Users](
    Замечание: User - это класс модели, Users - это название таблицы в базе данных Класс контекста наследуется от класса DbContext. В своем конструкторе он          передает в конструктор базового класса название строки подключения из файла App.config. Также в контексте данных определяется свойство по типу DbSet<Product> -        через него мы будем взаимодействовать с таблицей, которая хранит объекты Product.
 
    В разметки Xaml
-   ``` bash
+   ``` xml
 	<DataGrid AutoGenerateColumns="False" x:Name="usersGrid">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50"/>
@@ -219,7 +219,7 @@ CREATE TABLE [dbo].[Users](
    3) В новой папке Models создать классы User и UserContext
 	
 	 Код класса User:
-	   ``` bash
+	   ``` Csharp
 		using System;
 		using System.Collections.Generic;
 		using System.Linq;
@@ -239,7 +239,7 @@ CREATE TABLE [dbo].[Users](
 	 Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
 	
 	   Код класса UserContext:
-	   ``` bash
+	   ``` Csharp
 		using System.Data.Entity;
 
 		namespace WinFormsAppEntityFrameworkCore.Models
@@ -262,7 +262,7 @@ CREATE TABLE [dbo].[Users](
 	
 	   Код App.config:
 
-		``` bash
+		``` xml
 		<?xml version="1.0" encoding="utf-8" ?>
 		<configuration>
 		<connectionStrings>
@@ -277,7 +277,7 @@ CREATE TABLE [dbo].[Users](
 
 	
    4) Код Form1.cs:
-		``` bash
+		``` Csharp
 			using Microsoft.Data.SqlClient;
 			using System.Configuration;
 			using System.Data;
