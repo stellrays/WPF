@@ -178,7 +178,6 @@ CREATE TABLE [dbo].[Users](
 	using System.Linq;
 	using System.Text;
 	using System.Threading.Tasks;
-
 	namespace WPFEntityFrameworkCore.Models
 	{
 	    public class User
@@ -244,20 +243,20 @@ CREATE TABLE [dbo].[Users](
 	   
    Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
 	
-   Код класса UserContext:
-	   
-	   ``` Csharp
-		using System.Data.Entity;
+   Код класса UserContext
+ 
+   ``` Csharp
+	using System.Data.Entity;
+	namespace WinFormsAppEntityFrameworkCore.Models
+	{
+	    internal class UserContext : DbContext
+	    {
+		public UserContext() : base("DefaultConnection") { }
+		public DbSet<User> Users { get; set; }
+	    }
+	}
 
-		namespace WinFormsAppEntityFrameworkCore.Models
-		{
-		    internal class UserContext : DbContext
-		    {
-			public UserContext() : base("DefaultConnection") { }
-			public DbSet<User> Users { get; set; }
-		    }
-		}
-	   ```
+   ```
 	
    Свойства грида: AllowsUserToAddRows = False
 			SelectionMode = FullColumnSelect
