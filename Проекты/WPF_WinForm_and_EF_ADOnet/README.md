@@ -226,9 +226,9 @@ CREATE TABLE [dbo].[Users](
    3) В новой папке Models создать классы User и UserContext
 	
    Код класса User:
-	 
-    ``` Csharp
-		using System;
+   
+   ``` Csharp
+	using System;
 		using System.Collections.Generic;
 		using System.Linq;
 		using System.Text;
@@ -243,7 +243,7 @@ CREATE TABLE [dbo].[Users](
 			public int Age { get; set; }
 		    }
 		}
-    ```
+   ```
 	   
    Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
 	
