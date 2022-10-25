@@ -18,7 +18,7 @@
 
 ### Скрип SQL создания таблицы Users
 
-``` bash
+```sql
 CREATE TABLE [dbo].[Users](
 	[Id] [int] NOT NULL,
 	[Name] [varchar](100) NULL,
@@ -38,7 +38,7 @@ CREATE TABLE [dbo].[Users](
    
    Код класса User:
    
-   ``` bash
+   ```Csharp
    using System;
    using System.Collections.Generic;
    namespace ConsoleAppEntityFrameworkCore.Model
