@@ -109,7 +109,7 @@ CREATE TABLE [dbo].[Users](
    ```
    5) Результат проекта:
    
-   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppEntityFrameworkCoreRezult.png?raw=true)
+   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/ConsoleAppEntityFrameworkCoreRezult.png?raw=true)
    
 ## Этап 2
 
@@ -155,7 +155,7 @@ CREATE TABLE [dbo].[Users](
    ```
    4) Результат проекта:
    
-   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/ConsoleAppADOnetRezult.png?raw=true)
+   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/ConsoleAppADOnetRezult.png?raw=true)
    
    ``` bash
 
@@ -315,23 +315,23 @@ CREATE TABLE [dbo].[Users](
 	
    5) Результат проекта:
 	
-![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/WinFormsAppADONetResult.png?raw=true)
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/WinFormsAppADONetResult.png?raw=true)
 	
 ## Этап 7
 
    1) Создать Windows Forms приложения (.Net Framework + ADO.net)
    2) Добавив DataGridView на форму, добавить источник данных: 
 	
-![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource.png?raw=true)
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/DataSource.png?raw=true)
 	
    3) Выбрав источник данных и тип модели базы данных, добавить подключение:
 	
-![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource1.png?raw=true)
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/DataSource1.png?raw=true)
 
    4) Выбрать объекты базы данных, которые хотим вывести:
    
-![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSource2.png?raw=true)
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/DataSource2.png?raw=true)
 
    5) Результат проекта:
    
-![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/ВорлдСкиллс/Тренеровочный%20вариант%202021-2022/Дополнительно/Screen/DataSourceRezult.png?raw=true)
+![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/DataSourceRezult.png?raw=true)
