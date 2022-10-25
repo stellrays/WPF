@@ -217,49 +217,55 @@ CREATE TABLE [dbo].[Users](
 
    1) Создать WPF приложения (Microsoft + ADO.net)
 
-## Этап 5 (в процессе)
+## Этап 5 (в процессе я тут)
 
    1) Создать Windows Forms приложения (Microsoft + Entity Framework Core)
-   2) Добавить  пакет EntityFramework
-   3) В новой папке Models создать классы User и UserContext
+   2) Добавить  пакет Microsoft.EntityFrameworkCore.SqlServer + Microsoft.EntityFrameworkCore.Tools
+   3) Добавить App.config (Ссылка)
+   4) В новой папке Models создать классы User и UserContext
 	
    Код класса User:
    ``` Csharp
 	   using System;
 	   using System.Collections.Generic;
-	   using System.Linq;
-	   using System.Text;
 	   using System.Threading.Tasks;
 	   namespace WinFormsAppEntityFrameworkCore.Models
 	   {
-	   internal class User
-              {
-	       public int Id { get; set; }
-	       public string Name { get; set; } = null!;
-	       public int Age { get; set; }
-	      }
-	   }
+  	     internal class User
+  	     {
+    	       public int Id { get; set; }
+    	       public string? Name { get; set; }
+    	       public int Age { get; set; }
+  	     }
+	   }	   
    ```
-	   
-   Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
-	
+	   	   
    Код класса UserContext
- 
    ``` Csharp
-	using System.Data.Entity;
-	namespace WinFormsAppEntityFrameworkCore.Models
-	{
-	    internal class UserContext : DbContext
-	    {
-		public UserContext() : base("DefaultConnection") { }
-		public DbSet<User> Users { get; set; }
-	    }
-	}
-
-   ```
-	
-   Свойства грида: AllowsUserToAddRows = False
-			SelectionMode = FullColumnSelect
+   using System.Configuration;
+   using Microsoft.EntityFrameworkCore;
+   namespace ConsoleAppEntityFrameworkCore.Model
+   {
+       public partial class UserContext : DbContext
+       {  
+           public UserContext()
+           {
+           }
+           public UserContext(DbContextOptions<UserContext> options)
+               : base(options)
+           {
+           }     
+           protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+           {
+               if (!optionsBuilder.IsConfigured)
+               {
+	           //App.config
+                   optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnectionLocalDb"].ToString());
+               }
+           }       
+       }
+   }	  	
+  
 ## Этап 6
 
    1) Создать Windows Forms приложения (Microsoft + ADO.net)
