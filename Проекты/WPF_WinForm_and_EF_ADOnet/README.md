@@ -213,11 +213,11 @@ CREATE TABLE [dbo].[Users](
 
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 
-## Этап 4 (в процессе я тут)
+## Этап 4 (в процессе)
 
    1) Создать WPF приложения (Microsoft + ADO.net)
 
-## Этап 5 (в процессе)
+## Этап 5 (в процессе я тут)
 
    1) Создать Windows Forms приложения (Microsoft + Entity Framework Core)
    2) Добавить  пакет Microsoft.EntityFrameworkCore.SqlServer + Microsoft.EntityFrameworkCore.Tools
