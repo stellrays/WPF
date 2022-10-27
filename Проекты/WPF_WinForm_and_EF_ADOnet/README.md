@@ -266,7 +266,7 @@ CREATE TABLE [dbo].[Users](
            }       
        }
    }	  	
-  
+   ```
 ## Этап 6
 
    1) Создать Windows Forms приложения (Microsoft + ADO.net)
