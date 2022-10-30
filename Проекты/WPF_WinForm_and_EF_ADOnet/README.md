@@ -30,6 +30,19 @@ CREATE TABLE [dbo].[Users](
     ) ON [PRIMARY]
 ```
 
+### Код файла App.config, используемый в ниже описанных проектах:
+
+	``` xml
+		<?xml version="1.0" encoding="utf-8" ?>
+		<configuration>
+		<connectionStrings>
+			<add  name="ConnectionLocalDb"
+			      connectionString="Server = DESKTOP-0VRO2QB\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
+			      providerName="System.Data.SqlClient"/>
+		</connectionStrings>
+		</configuration>
+	```
+
 ## Этап 1
 	
    1) Создать Консольного приложения (Microsoft + Entity Framework Core)
@@ -354,20 +367,8 @@ CREATE TABLE [dbo].[Users](
    1) Создать Windows Forms приложения (Microsoft + ADO.net)
    2) Добавить пакет Microsoft.Data.SqlClient и DataGridView
    3) Сделать строку подключения через App.config
-	
-	   Код App.config:
 
-		``` xml
-		<?xml version="1.0" encoding="utf-8" ?>
-		<configuration>
-		<connectionStrings>
-			<add  name="ConnectionLocalDb"
-			      connectionString="Server = DESKTOP-0VRO2QB\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
-			      providerName="System.Data.SqlClient"/>
-		</connectionStrings>
-		</configuration>
-		```
-	
+	ссылка
 
 	
    4) Код Form1.cs:
