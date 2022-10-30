@@ -177,33 +177,57 @@ CREATE TABLE [dbo].[Users](
    ```
    
 
-## Этап 3 (в процессе)
+## Этап 3
 
    1) Создать WPF приложения (Microsoft + Entity Framework Core)
-   2) Подключить необходимый пакет EntityFramework, Microsoft.EntityFrameworkCore.SqlServer
+   2) Подключить необходимый пакет Microsoft.EntityFrameworkCore.SqlServer + Microsoft.EntityFrameworkCore.Tools
    3) В новой папке Models создать классы User и UserContext
    
    Код класса User
  
    ``` Csharp
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
-	namespace WPFEntityFrameworkCore.Models
+	namespace WPFEntityFrameworkCore.Model
 	{
 	    public class User
 	    {
 		public int Id { get; set; }
-		public string Name { get; set; } = null!;
+		public string? Name { get; set; }
 		public int Age { get; set; }
 	    }
 	}
-
    ```
-   Для взаимодействия с базой данных через Entity Framework нам нужен контекст данных
-   Код класса UserContext
+   
+     Код класса UserContext
+ 
+   ``` Csharp
+	using Microsoft.EntityFrameworkCore;
+	using System.Configuration;
+	namespace WPFEntityFrameworkCore.Model
+	{
+	    public partial class UserContext : DbContext
+	    {
+		public UserContext()
+		{
+		}
+		public UserContext(DbContextOptions<UserContext> options)
+		    : base(options) { }        
+		public DbSet<User> Users => Set<User>();
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+		    if (!optionsBuilder.IsConfigured)
+		    {
+			// Подключение к SQL Server из App.config
+			optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnectionLocalDb"].ToString());
+		    }
+		}
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+		    OnModelCreatingPartial(modelBuilder);
+		}
+		partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+	    }
+	}
+   ```
    
    ``` bash
    
@@ -212,10 +236,11 @@ CREATE TABLE [dbo].[Users](
 	данных определяется свойство по типу DbSet<User> - через него мы будем взаимодействовать с таблицей, которая хранит объекты User.
    ```
   
+   4) Добавить разметку
 
    В разметки Xaml
    ``` xml
-	<DataGrid AutoGenerateColumns="False" x:Name="usersGrid">
+	<DataGrid AutoGenerateColumns="False" x:Name="UsersGrid">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50"/>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Имя" Width="120"/>
@@ -223,7 +248,32 @@ CREATE TABLE [dbo].[Users](
             </DataGrid.Columns>
         </DataGrid>
    ```
-
+   
+   5) Описать класс MainWindow.xaml.cs
+   
+   ``` Csharp
+   	using System.Windows;
+	using Microsoft.EntityFrameworkCore;
+	using WPFEntityFrameworkCore.Model;
+	namespace WPFEntityFrameworkCore
+	{
+	    public partial class MainWindow : Window
+	    {
+		public MainWindow()
+		{
+		    InitializeComponent();
+		    UserContext db;
+		    db = new UserContext();
+		    db.Users.Load();
+		    UsersGrid.ItemsSource = db.Users.Local.ToBindingList();
+		}
+	    }
+	}
+   ``` 
+   
+   6) Результат выполнения кода:
+   
+   ![alt text]()
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 
 ## Этап 4
