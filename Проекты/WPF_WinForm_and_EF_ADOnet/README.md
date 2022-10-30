@@ -273,7 +273,8 @@ CREATE TABLE [dbo].[Users](
    
    6) Результат выполнения кода:
    
-   ![alt text]()
+   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/WPFEntityFrameworkCoreRezult.png?raw=true)
+   
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 
 ## Этап 4
