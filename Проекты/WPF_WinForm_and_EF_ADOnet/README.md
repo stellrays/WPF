@@ -32,16 +32,16 @@ CREATE TABLE [dbo].[Users](
 
 ### Код файла App.config, используемый в ниже описанных проектах:
 
-	``` xml
-		<?xml version="1.0" encoding="utf-8" ?>
-		<configuration>
-		<connectionStrings>
-			<add  name="ConnectionLocalDb"
-			      connectionString="Server = DESKTOP-0VRO2QB\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
-			      providerName="System.Data.SqlClient"/>
-		</connectionStrings>
-		</configuration>
-	```
+``` xml
+	<?xml version="1.0" encoding="utf-8" ?>
+	<configuration>
+	<connectionStrings>
+		<add  name="ConnectionLocalDb"
+		      connectionString="Server = DESKTOP-0VRO2QB\SQLEXPRESS_2;Database=UserDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
+		      providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+	</configuration>
+```
 
 ## Этап 1
 	
