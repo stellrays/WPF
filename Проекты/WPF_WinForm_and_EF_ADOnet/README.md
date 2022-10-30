@@ -43,6 +43,8 @@ CREATE TABLE [dbo].[Users](
 	 </configuration>
 ```
 
+[Все варианты App.config](https://github.com/stellrays/WPF/tree/main/Подсказки%20и%20советы)
+
 ## Этап 1
 	
    1) Создать Консольного приложения (Microsoft + Entity Framework Core)
