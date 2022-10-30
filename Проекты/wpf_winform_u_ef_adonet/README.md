@@ -213,9 +213,63 @@ CREATE TABLE [dbo].[Users](
 
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 
-## Этап 4 (в процессе)
+## Этап 4 (в процессе я тут)
 
    1) Создать WPF приложения (Microsoft + ADO.net)
+   2) Добавить пакет Microsoft.EntityFrameworkCore.SqlServer
+   3) Добавить необходимые элементы на форму
+   
+   Разметка MainWindow.xaml
+   ``` xml
+	<Grid  ShowGridLines="True">
+        	   <Grid.RowDefinitions>
+           	   <RowDefinition Height="*" />
+            	   <RowDefinition Height="Auto" />
+     	     </Grid.RowDefinitions>
+     	     <DataGrid AutoGenerateColumns="False" x:Name="UsersGrid">
+		    <DataGrid.Columns>
+			<DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="100"/>
+			<DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="110"/>
+			<DataGridTextColumn Binding="{Binding Age}" Header="Age" Width="70"/>
+		    </DataGrid.Columns>
+              </DataGrid>
+    	 </Grid>
+   ```
+   
+   4) Добавить App.config
+   ссылка
+   5) Описать класс MainWindow.xaml.cs
+   
+   ``` Csharp
+   	using System.Windows;
+	using System.Data;
+	using System.Configuration;
+	using Microsoft.Data.SqlClient;
+	namespace WPFAppADONet
+	{
+		public partial class MainWindow : Window
+		{
+			public MainWindow()
+			{
+			    InitializeComponent();
+			    string connectionString = ConfigurationManager.ConnectionStrings["ConnectionLocalDb"].ConnectionString; ;
+			    string sql = "SELECT * FROM users";
+			    DataTable usersTable = new DataTable();
+			    SqlConnection connection = null;
+			    connection = new SqlConnection(connectionString);
+			    SqlCommand command = new SqlCommand(sql, connection);
+			    SqlDataAdapter adapter = new SqlDataAdapter(command);                      
+			    connection.Open();
+			    adapter.Fill(usersTable);
+			    UsersGrid.ItemsSource = usersTable.DefaultView;
+			}
+		}
+	}	
+   ```
+   
+   6) Результат выполнения кода:
+   
+   ![alt text]()
 
 ## Этап 5
 
