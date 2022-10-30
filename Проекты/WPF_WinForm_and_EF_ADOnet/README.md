@@ -221,52 +221,79 @@ CREATE TABLE [dbo].[Users](
 
    1) Создать Windows Forms приложения (Microsoft + Entity Framework Core)
    2) Добавить  пакет Microsoft.EntityFrameworkCore.SqlServer + Microsoft.EntityFrameworkCore.Tools
-   3) Добавить App.config (Ссылка)
-   4) В новой папке Models создать классы User и UserContext
+   3) В новой папке Model создать классы User и UserContext
 	
    Код класса User:
    ``` Csharp
-	   using System;
-	   using System.Collections.Generic;
-	   using System.Threading.Tasks;
-	   namespace WinFormsAppEntityFrameworkCore.Models
+	   namespace WinFormsAppEntityFrameworkCore.Model
 	   {
-  	     internal class User
-  	     {
+    	   public class User
+    	      {
     	       public int Id { get; set; }
     	       public string? Name { get; set; }
-    	       public int Age { get; set; }
-  	     }
-	   }	   
+      	       public int Age { get; set; }
+   	      }
+	   }
    ```
 	   	   
    Код класса UserContext
    ``` Csharp
-   using System.Configuration;
-   using Microsoft.EntityFrameworkCore;
-   namespace ConsoleAppEntityFrameworkCore.Model
-   {
-       public partial class UserContext : DbContext
-       {  
-           public UserContext()
-           {
-           }
-           public UserContext(DbContextOptions<UserContext> options)
-               : base(options)
-           {
-           }     
-	   public virtual DbSet<User> Users { get; set; } = null!;
-           protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-           {
-               if (!optionsBuilder.IsConfigured)
-               {
-	           //App.config
-                   optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnectionLocalDb"].ToString());
-               }
-           }       
-       }
-   }	  	
+	using Microsoft.EntityFrameworkCore;
+	using System.Configuration;
+	using WinFormsAppEntityFrameworkCore.Model;
+	public partial class UserContext : DbContext
+    	{
+       		public UserContext()
+        	{
+        	}
+        	public UserContext(DbContextOptions<UserContext> options)
+         	   : base(options)
+        	{
+        	}
+       	 	public DbSet<User> Users => Set<User>();
+       		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        	{
+           	 if (!optionsBuilder.IsConfigured)
+            		{
+            		// Подключение к SQL Server из App.config
+            		optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnectionLocalDb"].ToString());         
+            		}
+        	}
+        	protected override void OnModelCreating(ModelBuilder modelBuilder)
+        	{
+            	OnModelCreatingPartial(modelBuilder);
+        	}
+        	partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    	}
    ```
+   
+   
+   4) Добавть DataGridView на форму
+   5) Дописать код для формы
+   
+   Код Form1:
+   
+   ``` Csharp
+   	using Microsoft.EntityFrameworkCore;
+	namespace WinFormsAppEntityFrameworkCore
+	{
+   	 public partial class Form1 : Form
+   	 {
+        	public Form1()
+        	{
+           	 InitializeComponent();
+           	 UserContext db;
+           	 db = new UserContext();
+           	 db.Users.Load();
+           	 dataGridView1.DataSource = db.Users.Local.ToBindingList();
+        	}
+   	 }
+	}
+   ```
+   
+   6) Результат выполнения кода:
+   рисунок
+   
 ## Этап 6
 
    1) Создать Windows Forms приложения (Microsoft + ADO.net)
