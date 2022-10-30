@@ -1,0 +1,16 @@
+﻿<Window x:Class="WPFEntityFrameworkCore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEntityFrameworkCore"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="350">
+    <DataGrid AutoGenerateColumns="False" x:Name="UsersGrid">
+        <DataGrid.Columns>
+            <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50"/>
+            <DataGridTextColumn Binding="{Binding Name}" Header="Имя" Width="120"/>
+            <DataGridTextColumn Binding="{Binding Age}" Header="Возраст" Width="80"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>
