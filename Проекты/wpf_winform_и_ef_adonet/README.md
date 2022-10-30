@@ -217,7 +217,7 @@ CREATE TABLE [dbo].[Users](
 
    1) Создать WPF приложения (Microsoft + ADO.net)
 
-## Этап 5 (в процессе я тут)
+## Этап 5
 
    1) Создать Windows Forms приложения (Microsoft + Entity Framework Core)
    2) Добавить  пакет Microsoft.EntityFrameworkCore.SqlServer + Microsoft.EntityFrameworkCore.Tools
