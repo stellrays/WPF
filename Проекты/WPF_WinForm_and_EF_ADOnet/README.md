@@ -213,7 +213,7 @@ CREATE TABLE [dbo].[Users](
 
 Замечание: при таком подходе надо изначально создавать базу данных на сервере или в классе AppContext прописать создание базы данных автоматически.
 
-## Этап 4 (в процессе я тут)
+## Этап 4
 
    1) Создать WPF приложения (Microsoft + ADO.net)
    2) Добавить пакет Microsoft.EntityFrameworkCore.SqlServer
@@ -269,7 +269,7 @@ CREATE TABLE [dbo].[Users](
    
    6) Результат выполнения кода:
    
-   ![alt text]()
+   ![alt text](https://github.com/stellrays/WPF/blob/main/Проекты/WPF_WinForm_and_EF_ADOnet/Screen/WPFAppADONetRezult.png?raw=true)
 
 ## Этап 5
 
