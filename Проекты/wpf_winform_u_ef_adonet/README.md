@@ -1,4 +1,4 @@
-# Задание
+# Задание (надо сделать содержание ссылками)
 Создать решение в котором будут следующие проекты ( Visual Studio 2022, .NET Core 6 )
 
 1. ConsoleApp + EF(Entity Framework Core)    (Microsoft) 
