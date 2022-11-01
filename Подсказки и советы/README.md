@@ -1,4 +1,4 @@
-<code>[главный файл](https://github.com/artemovsergey/WPF)
+<code>[Главный файл](https://github.com/artemovsergey/WPF)
 </code>
 ## Файл конфигурации приложения App.config
 
